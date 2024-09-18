@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.social-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.social-icon-link:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+@keyframes icon-glow {
+  0% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ffff, 0 0 20px #00ffff;
+  }
+  100% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 25px #00ffff, 0 0 30px #00ffff;
+  }
+}
+
+.social-icon-link:hover {
+  animation: icon-glow 1.5s ease-in-out infinite alternate;
+}
+
+.social-icon-link svg {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-icon-link:hover svg {
+  color: #00ffff;
+}
